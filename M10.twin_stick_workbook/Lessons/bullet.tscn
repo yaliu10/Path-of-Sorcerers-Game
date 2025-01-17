@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpwup7kowqptq"]
+[gd_scene load_steps=5 format=3 uid="uid://bpwup7kowqptq"]
 
 [ext_resource type="Texture2D" uid="uid://dxe2pniv6kdn4" path="res://weapons/bullets/fire_trail.png" id="1_8hhrv"]
 [ext_resource type="Script" path="res://Lessons/bullet.gd" id="1_tkfd3"]
 [ext_resource type="Texture2D" uid="uid://bgn8fvhkjniwn" path="res://weapons/bullets/fire.png" id="2_ek3hg"]
-[ext_resource type="PackedScene" uid="uid://csjyu2v5562s4" path="res://Lessons/weapon.tscn" id="4_24bph"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2fwao"]
 radius = 15.0
@@ -22,5 +21,3 @@ texture = ExtResource("2_ek3hg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2fwao")
-
-[node name="Weapon" parent="." instance=ExtResource("4_24bph")]
