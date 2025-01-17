@@ -1,8 +1,9 @@
 res://default_env.tres
 res://Lessons/player.tscn
+res://addons/gdpractice/assets/theme.tres
 res://levels/rooms/tilesets/floating_dungeon_tileset.tres
 res://levels/rooms/tilesets/tileset_invisible_walls.tres
 res://Lessons/test_scene.tscn
 res://Lessons/bullet.tscn
 res://Lessons/weapon.tscn
-res://Lessons/weapon.gd
+res://Lessons/weapon_pivot.gd
