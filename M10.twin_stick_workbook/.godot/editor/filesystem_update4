@@ -6,3 +6,5 @@ res://Lessons/test_scene.tscn
 res://Lessons/bullet.tscn
 res://Lessons/weapon.tscn
 res://Lessons/weapon_pivot.gd
+res://Lessons/mob.tscn
+res://Lessons/mob.gd
