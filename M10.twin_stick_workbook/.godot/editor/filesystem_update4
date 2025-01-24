@@ -1,10 +1,13 @@
 res://default_env.tres
-res://Lessons/player.tscn
+res://Lessons/mob.tscn
 res://levels/rooms/tilesets/floating_dungeon_tileset.tres
 res://levels/rooms/tilesets/tileset_invisible_walls.tres
+res://Lessons/mob.gd
+res://Lessons/bullet.gd
+res://Lessons/player.gd
+res://Lessons/player.tscn
+res://Lessons/weapon.gd
+res://Lessons/weapon_pivot.gd
 res://Lessons/test_scene.tscn
 res://Lessons/bullet.tscn
 res://Lessons/weapon.tscn
-res://Lessons/weapon_pivot.gd
-res://Lessons/mob.tscn
-res://Lessons/mob.gd

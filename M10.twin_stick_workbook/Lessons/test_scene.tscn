@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbn05jcrhnwcr"]
+[gd_scene load_steps=4 format=3 uid="uid://bbn05jcrhnwcr"]
 
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_choxl"]
 [ext_resource type="PackedScene" uid="uid://uerrtael14n4" path="res://Lessons/player.tscn" id="2_wmhi6"]
+[ext_resource type="PackedScene" uid="uid://bw86xoed5wr6e" path="res://Lessons/mob.tscn" id="3_e181m"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="RoomA" parent="." instance=ExtResource("1_choxl")]
+metadata/_edit_group_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_wmhi6")]
 position = Vector2(743, 535)
+
+[node name="Mob" parent="." instance=ExtResource("3_e181m")]
+position = Vector2(444, 244)

@@ -1,4 +1,4 @@
-extends Node2D
+class_name Weapon extends Node2D
 
 @export var bullet_scene: PackedScene = preload("res://Lessons/bullet.tscn")
 @export_range(100.0, 2000.0, 1.0) var max_range := 2000
