@@ -6,6 +6,7 @@ var _player: Player = null
 
 @export var max_speed := 500.0
 @export var acceleration := 1000.0
+@export var health := 3: set = set_health
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 		if body is Player:
@@ -25,3 +26,11 @@ func _physics_process(delta: float) -> void:
 		var desired_velocity := direction * speed
 		velocity = velocity.move_toward(desired_velocity, acceleration * delta)
 	move_and_slide()
+
+func set_health(new_health: int) -> void:
+	health = new_health
+	if health <= 0:
+		die()
+
+func die() -> void:
+	queue_free()
