@@ -6,15 +6,17 @@ var _player: Player = null
 
 @export var max_speed := 500.0
 @export var acceleration := 1000.0
-@export var health := 3: set = set_health
+@export var health := 15: set = set_health
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _ready() -> void:
+	detection_area.body_entered.connect(func(body: Node) -> void:
 		if body is Player:
 			_player = body
-
-func _on_area_2d_body_exited(body: Node2D) -> void:
-	if body is Player:
+	)
+	detection_area.body_exited.connect(func(body: Node) -> void:
+		if body is Player:
 			_player = null
+	)
 
 func _physics_process(delta: float) -> void:
 	if _player == null:
