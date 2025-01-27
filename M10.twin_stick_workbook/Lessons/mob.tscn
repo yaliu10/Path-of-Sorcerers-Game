@@ -33,3 +33,8 @@ shape = SubResource("CircleShape2D_ifs4o")
 rotation = 1.55101
 shape = SubResource("CapsuleShape2D_kkysa")
 debug_color = Color(0.177302, 0.632261, 0.345898, 0.42)
+
+[node name="HitBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://uerrtael14n4"]
+[gd_scene load_steps=10 format=3 uid="uid://uerrtael14n4"]
 
 [ext_resource type="Script" path="res://Lessons/player.gd" id="1_mx7x6"]
 [ext_resource type="Texture2D" uid="uid://bw03btxpkxde4" path="res://player/godot_bottom.png" id="1_s5ygc"]
@@ -11,6 +11,20 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ai4l8"]
 radius = 18.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3bbx"]
+bg_color = Color(3.17663e-06, 0.760045, 0.300708, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.838046, 0.388038, 0.324343, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 5
+
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_mx7x6")
@@ -20,6 +34,7 @@ texture = ExtResource("1_s5ygc")
 script = ExtResource("3_vage6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(-1, 40)
 shape = SubResource("CircleShape2D_ai4l8")
 
@@ -46,3 +61,13 @@ texture = ExtResource("6_cf83i")
 position = Vector2(75, 26)
 rotation = 0.237815
 texture = ExtResource("6_cf83i")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -44.0
+offset_top = -95.0
+offset_right = 47.0
+offset_bottom = -68.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_h3bbx")
+value = 50.0
+show_percentage = false
