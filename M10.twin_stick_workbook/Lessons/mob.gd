@@ -3,10 +3,12 @@ class_name Mob extends CharacterBody2D
 var _player: Player = null
 
 @onready var detection_area: Area2D = %DetectionArea
+@onready var hit_box: Area2D = %HitBox
 
 @export var max_speed := 500.0
 @export var acceleration := 1000.0
 @export var health := 15: set = set_health
+@export var damage := 0
 
 func _ready() -> void:
 	detection_area.body_entered.connect(func(body: Node) -> void:
@@ -16,6 +18,10 @@ func _ready() -> void:
 	detection_area.body_exited.connect(func(body: Node) -> void:
 		if body is Player:
 			_player = null
+	)
+	hit_box.body_entered.connect(func (body: Node) -> void:
+		if body is Player:
+			body.health -= damage
 	)
 
 func _physics_process(delta: float) -> void:
@@ -31,7 +37,7 @@ func _physics_process(delta: float) -> void:
 
 func set_health(new_health: int) -> void:
 	health = new_health
-	if health <= 0:
+	if health == 0:
 		die()
 
 func die() -> void:

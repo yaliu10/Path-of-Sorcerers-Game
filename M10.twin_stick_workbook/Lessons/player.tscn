@@ -11,19 +11,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ai4l8"]
 radius = 18.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3bbx"]
-bg_color = Color(3.17663e-06, 0.760045, 0.300708, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.838046, 0.388038, 0.324343, 1)
-border_blend = true
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4igj"]
+bg_color = Color(0.460456, 0.854339, 0.468693, 1)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-shadow_size = 5
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -64,10 +57,10 @@ texture = ExtResource("6_cf83i")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = -44.0
-offset_top = -95.0
-offset_right = 47.0
+offset_left = -33.0
+offset_top = -75.0
+offset_right = 36.0
 offset_bottom = -68.0
-theme_override_styles/fill = SubResource("StyleBoxFlat_h3bbx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_c4igj")
 value = 50.0
 show_percentage = false
