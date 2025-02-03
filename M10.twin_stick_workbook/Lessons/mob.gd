@@ -49,5 +49,5 @@ func take_damage(amount: int) -> void:
 		return
 	invincible = true
 	set_health(health - amount)
-	#await(get_tree().create_timer(0.5), "timeout")
+	await (get_tree().create_timer(0.5))
 	invincible = false
