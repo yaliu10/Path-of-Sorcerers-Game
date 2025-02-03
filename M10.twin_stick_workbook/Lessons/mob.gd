@@ -1,14 +1,15 @@
 class_name Mob extends CharacterBody2D
 
 var _player: Player = null
-
-@onready var detection_area: Area2D = %DetectionArea
-@onready var hit_box: Area2D = %HitBox
+var invincible = false
 
 @export var max_speed := 500.0
 @export var acceleration := 1000.0
 @export var health := 15: set = set_health
-@export var damage := 0
+@export var damage := 1
+
+@onready var detection_area: Area2D = %DetectionArea
+@onready var hit_box: Area2D = %HitBox
 
 func _ready() -> void:
 	detection_area.body_entered.connect(func(body: Node) -> void:
@@ -37,8 +38,16 @@ func _physics_process(delta: float) -> void:
 
 func set_health(new_health: int) -> void:
 	health = new_health
-	if health == 0:
+	if health <= 0:
 		die()
 
 func die() -> void:
 	queue_free()
+
+func take_damage(amount: int) -> void:
+	if invincible:
+		return
+	invincible = true
+	set_health(health - amount)
+	#await(get_tree().create_timer(0.5), "timeout")
+	invincible = false

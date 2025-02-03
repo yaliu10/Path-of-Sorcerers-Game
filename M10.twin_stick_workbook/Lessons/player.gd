@@ -20,6 +20,7 @@ func set_health(new_health: int) -> void:
 	var previous_health := health
 	health = clampi(new_health, 0, max_health)
 	health_bar.value = health
+	print("Player health changed from", previous_health, "to", health)
 	if health == 0:
 		die()
 
