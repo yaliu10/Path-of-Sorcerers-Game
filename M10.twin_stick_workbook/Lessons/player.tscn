@@ -8,8 +8,9 @@
 [ext_resource type="Script" path="res://Lessons/weapon_pivot.gd" id="5_rw6jb"]
 [ext_resource type="Texture2D" uid="uid://dekkcmj408pvt" path="res://player/hand_fire.png" id="6_cf83i"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ai4l8"]
-radius = 18.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_66q3v"]
+radius = 33.0
+height = 114.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4igj"]
 bg_color = Color(0.460456, 0.854339, 0.468693, 1)
@@ -28,8 +29,7 @@ script = ExtResource("3_vage6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-1, 40)
-shape = SubResource("CircleShape2D_ai4l8")
+shape = SubResource("CapsuleShape2D_66q3v")
 
 [node name="Shadow" parent="." instance=ExtResource("2_ba4tm")]
 
