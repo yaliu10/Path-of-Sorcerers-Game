@@ -1,11 +1,10 @@
 res://default_env.tres
-res://Lessons/pickup.tscn
-res://addons/gdpractice/assets/theme.tres
+res://Lessons/chest.tscn
 res://levels/rooms/tilesets/floating_dungeon_tileset.tres
 res://levels/rooms/tilesets/tileset_invisible_walls.tres
-res://Lessons/pickup.gd
 res://Lessons/player.tscn
 res://Lessons/test_scene.tscn
 res://Lessons/bullet.tscn
 res://Lessons/weapon.tscn
 res://Lessons/mob.tscn
+res://Lessons/pickup.tscn

@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=3 uid="uid://uholtatss5km"]
+
+[ext_resource type="Script" path="res://Lessons/chest.gd" id="1_j1a0k"]
+[ext_resource type="Texture2D" uid="uid://dub7cda3qxho2" path="res://pickups/chest/chest_bottom.png" id="2_rjblq"]
+[ext_resource type="Script" path="res://item.gd" id="2_srr42"]
+[ext_resource type="Texture2D" uid="uid://bfj2ayjhou4bv" path="res://pickups/chest/chest_top.png" id="3_nyncg"]
+[ext_resource type="AudioStream" uid="uid://c2woejhi871h1" path="res://pickups/pickup.wav" id="3_s0bv5"]
+[ext_resource type="Texture2D" uid="uid://be8lmb157qflx" path="res://pickups/pickup_health.png" id="4_7t7ur"]
+
+[sub_resource type="Resource" id="Resource_ril02"]
+script = ExtResource("2_srr42")
+display_name = "Heart"
+texture = ExtResource("4_7t7ur")
+sound_on_pickup = ExtResource("3_s0bv5")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehxc7"]
+size = Vector2(112, 107.5)
+
+[sub_resource type="Animation" id="Animation_m6h8v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -4)]
+}
+
+[sub_resource type="Animation" id="Animation_r5vqa"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -4), Vector2(36, -37), Vector2(98, 12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ltna"]
+_data = {
+"RESET": SubResource("Animation_m6h8v"),
+"open": SubResource("Animation_r5vqa")
+}
+
+[node name="Chest" type="Area2D"]
+script = ExtResource("1_j1a0k")
+possible_items = Array[ExtResource("2_srr42")]([SubResource("Resource_ril02")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_ehxc7")
+
+[node name="Bottom" type="Sprite2D" parent="."]
+texture = ExtResource("2_rjblq")
+
+[node name="Top" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = ExtResource("3_nyncg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_3ltna")
+}
