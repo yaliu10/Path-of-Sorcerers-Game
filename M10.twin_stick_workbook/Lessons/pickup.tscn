@@ -1,13 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://ct3u3cg7dra6u"]
 
 [ext_resource type="Script" path="res://Lessons/pickup.gd" id="1_jti8f"]
-[ext_resource type="Script" path="res://item.gd" id="2_ocoyk"]
+[ext_resource type="Script" path="res://Lessons/healing_item.gd" id="2_n3wch"]
 [ext_resource type="Texture2D" uid="uid://be8lmb157qflx" path="res://pickups/pickup_health.png" id="2_p5oja"]
 [ext_resource type="AudioStream" uid="uid://c2woejhi871h1" path="res://pickups/pickup.wav" id="3_eju18"]
 
-[sub_resource type="Resource" id="Resource_vd4b5"]
-script = ExtResource("2_ocoyk")
-display_name = "Heart"
+[sub_resource type="Resource" id="Resource_2gf8h"]
+script = ExtResource("2_n3wch")
+healing_amount = 2
+display_name = ""
 texture = ExtResource("2_p5oja")
 sound_on_pickup = ExtResource("3_eju18")
 
@@ -107,7 +108,7 @@ _data = {
 
 [node name="Pickup" type="Area2D"]
 script = ExtResource("1_jti8f")
-item = SubResource("Resource_vd4b5")
+item = SubResource("Resource_2gf8h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true

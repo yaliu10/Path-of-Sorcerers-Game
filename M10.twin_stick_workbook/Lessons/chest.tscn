@@ -1,15 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://uholtatss5km"]
+[gd_scene load_steps=13 format=3 uid="uid://uholtatss5km"]
 
 [ext_resource type="Script" path="res://Lessons/chest.gd" id="1_j1a0k"]
 [ext_resource type="Texture2D" uid="uid://dub7cda3qxho2" path="res://pickups/chest/chest_bottom.png" id="2_rjblq"]
-[ext_resource type="Script" path="res://item.gd" id="2_srr42"]
+[ext_resource type="Script" path="res://Lessons/item.gd" id="2_srr42"]
 [ext_resource type="Texture2D" uid="uid://bfj2ayjhou4bv" path="res://pickups/chest/chest_top.png" id="3_nyncg"]
 [ext_resource type="AudioStream" uid="uid://c2woejhi871h1" path="res://pickups/pickup.wav" id="3_s0bv5"]
+[ext_resource type="Script" path="res://Lessons/healing_item.gd" id="3_tjg1y"]
 [ext_resource type="Texture2D" uid="uid://be8lmb157qflx" path="res://pickups/pickup_health.png" id="4_7t7ur"]
 
-[sub_resource type="Resource" id="Resource_ril02"]
-script = ExtResource("2_srr42")
-display_name = "Heart"
+[sub_resource type="Resource" id="Resource_tsuxc"]
+script = ExtResource("3_tjg1y")
+healing_amount = 2
+display_name = ""
 texture = ExtResource("4_7t7ur")
 sound_on_pickup = ExtResource("3_s0bv5")
 
@@ -55,7 +57,7 @@ _data = {
 
 [node name="Chest" type="Area2D"]
 script = ExtResource("1_j1a0k")
-possible_items = Array[ExtResource("2_srr42")]([SubResource("Resource_ril02")])
+possible_items = Array[ExtResource("2_srr42")]([SubResource("Resource_tsuxc")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.25)
