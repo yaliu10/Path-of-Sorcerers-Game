@@ -7,7 +7,7 @@
 
 [sub_resource type="Resource" id="Resource_2gf8h"]
 script = ExtResource("2_n3wch")
-healing_amount = 2
+healing_amount = 5
 display_name = ""
 texture = ExtResource("2_p5oja")
 sound_on_pickup = ExtResource("3_eju18")
