@@ -22,7 +22,7 @@ func _ready() -> void:
 	)
 	hit_box.body_entered.connect(func (body: Node) -> void:
 		if body is Player:
-			body.health -= damage
+			body.set_health(body.health - damage)
 	)
 
 func _physics_process(delta: float) -> void:

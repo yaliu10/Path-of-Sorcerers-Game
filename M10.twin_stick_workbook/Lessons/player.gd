@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody2D
 
-var health := max_health : set = set_health
+var health: int = 0 : set = set_health
 
 @export var max_speed := 600.0
 @export var max_health := 5
@@ -9,7 +9,7 @@ var health := max_health : set = set_health
 @onready var health_bar: ProgressBar = %HealthBar
 
 func _ready() -> void:
-	health_bar.max_value = max_health
+	health = max_health
 	
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
