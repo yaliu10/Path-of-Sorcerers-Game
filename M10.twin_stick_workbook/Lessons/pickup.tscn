@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://be8lmb157qflx" path="res://pickups/pickup_health.png" id="2_p5oja"]
 [ext_resource type="AudioStream" uid="uid://c2woejhi871h1" path="res://pickups/pickup.wav" id="3_eju18"]
 
-[sub_resource type="Resource" id="Resource_2gf8h"]
+[sub_resource type="Resource" id="Resource_5tlm6"]
 script = ExtResource("2_n3wch")
 healing_amount = 5
 display_name = ""
@@ -108,7 +108,7 @@ _data = {
 
 [node name="Pickup" type="Area2D"]
 script = ExtResource("1_jti8f")
-item = SubResource("Resource_2gf8h")
+item = SubResource("Resource_5tlm6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true

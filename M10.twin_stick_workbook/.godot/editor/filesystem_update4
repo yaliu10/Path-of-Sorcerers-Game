@@ -2,6 +2,8 @@ res://default_env.tres
 res://Lessons/test_scene.tscn
 res://levels/rooms/tilesets/floating_dungeon_tileset.tres
 res://levels/rooms/tilesets/tileset_invisible_walls.tres
-res://Lessons/pickup.tscn
-res://Lessons/healing_item.gd
 res://Lessons/chest.tscn
+res://pickup.tscn
+res://Lessons/pickup.tscn
+res://Lessons/chest.gd
+res://Lessons/player.tscn
