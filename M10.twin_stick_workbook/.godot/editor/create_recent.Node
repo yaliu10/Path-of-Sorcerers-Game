@@ -1,3 +1,10 @@
+Button
+CenterContainer
+Label
+VBoxContainer
+PanelContainer
+ColorRect
+Control
 Node2D
 TileMap
 TileMapLayer

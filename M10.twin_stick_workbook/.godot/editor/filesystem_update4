@@ -4,3 +4,5 @@ res://levels/rooms/tilesets/tileset_invisible_walls.tres
 res://Lessons/game_level.tscn
 res://Lessons/test_scene.tscn
 res://Lessons/pickup.tscn
+res://common/shaders/blur_and_tint.gdshader
+res://Lessons/end_menu.tscn
