@@ -1,12 +1,11 @@
 @tool
 class_name Chest extends Area2D
 
-var player_near_by := false
-
 @export var possible_items: Array[Item] = []
 
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 
+var player_near_by := false
 
 func _ready() -> void:
 	body_entered.connect(func (body: Node) -> void:

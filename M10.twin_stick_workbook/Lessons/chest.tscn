@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://uholtatss5km"]
+[gd_scene load_steps=13 format=3 uid="uid://uholtatss5km"]
 
 [ext_resource type="Script" path="res://Lessons/chest.gd" id="1_j1a0k"]
 [ext_resource type="Texture2D" uid="uid://dub7cda3qxho2" path="res://pickups/chest/chest_bottom.png" id="2_rjblq"]
@@ -14,9 +14,6 @@ healing_amount = 5
 display_name = ""
 texture = ExtResource("5_6r711")
 sound_on_pickup = ExtResource("4_jx2uq")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbg2s"]
-size = Vector2(90, 81)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ehxc7"]
 size = Vector2(112, 107.5)
@@ -61,13 +58,6 @@ _data = {
 [node name="Chest" type="Area2D"]
 script = ExtResource("1_j1a0k")
 possible_items = Array[ExtResource("2_x4k5s")]([SubResource("Resource_s3h7h")])
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 4.5)
-shape = SubResource("RectangleShape2D_jbg2s")
-debug_color = Color(0.790229, 0.372689, 0.560652, 0.42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.25)
